@@ -1,0 +1,153 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="ShopWebForms.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - Intern Shop</title>
+    <script src="Scripts/knockout-3.4.0.js"></script>
+    <script src="Scripts/jquery-3.1.1.js"></script>
+    <script src="Scripts/jquery.shorten.1.0.js"></script>
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+    <webopt:bundlereference runat="server" path="~/Content/css" /> 
+
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="respond" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" runat="server" href="~/">Intern Shop</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a runat="server" href="~/">Home</a></li>
+                        <li class="dropdown"><a runat="server" href="~/Products" class="dropbtn">Products</a>
+                             <div class="dropdown-content">
+                                <a runat="server" href="~/UserControls">Controls</a>
+                                <a runat="server" href="~/Designs">Designs</a>   
+                              </div>
+                        </li>
+                        <li><a runat="server" href="~/Partners">Partners</a></li>                      
+                        <li><a runat="server" href="~/About">About us</a></li>  
+                        <li><a runat="server" href="http://localhost:57553">Forum</a></li>    
+                        <li><a runat="server" id="adminLink" visible="false" href="~/Administration">Admin</a></li>                    
+                    </ul>
+                    <asp:LoginView runat="server" ViewStateMode="Disabled">
+                        <AnonymousTemplate>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a runat="server" href="~/Account/Register">Register</a></li>
+                                <li><a runat="server" href="~/Account/Login">Log in</a></li>
+                            </ul>
+                        </AnonymousTemplate>
+                        <LoggedInTemplate>
+                            <ul class="nav navbar-nav navbar-right">                           
+                                <li><a runat="server" href="~/ShopingCart">Shoping Cart</a></li>
+                                <li><a runat="server" href="~/Account/Manage" title="Manage your account">Hello, <%: Context.User.Identity.GetUserName()  %> !</a></li>
+                                <li>
+                                    <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
+                                </li>
+                            </ul>
+                        </LoggedInTemplate>
+                        
+                        
+                    </asp:LoginView>
+                </div>
+            </div>
+        </div>
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+            <footer runat="server">
+                <p>&copy; <%: DateTime.Now.Year %> Intern Shop</p>
+                 <h3>Clients:</h3>
+                     <div class="row">
+                         		 <div class="col-md-2" >
+                            <a runat="server" href="https://google.com">
+                                <img class="clients-footer-pic" runat="server" src="Content/img/clients.jpg" width="150" height="90" />
+                            </a>   
+                        </div>
+                          <div class="col-md-2">
+                            <a runat="server" href="~/Designs">
+                                <img class="clients-footer-pic"  runat="server" src="Content/img/clients.jpg"  width="150" height="90"/>
+                            </a>   
+                        </div>
+                         <div class="col-md-2">
+                            <a runat="server" href="https://sportal.bg">
+                                <img class="clients-footer-pic"  runat="server" src="Content/img/clients.jpg"  width="150" height="90"/>
+                            </a>   
+                        </div>
+                         <div class="col-md-2">
+                            <a runat="server" href="https://facebook.com">
+                                <img class="clients-footer-pic"  runat="server" src="Content/img/clients.jpg"  width="150" height="90"/>
+                            </a>   
+                        </div>
+                         <div class="col-md-2">
+                            <a runat="server" href="~/Designs">
+                                <img class="clients-footer-pic"  runat="server" src="Content/img/clients.jpg"  width="150" height="90"/>
+                            </a>   
+                        </div>
+                         <div class="col-md-2">
+                            <a runat="server" href="~/Designs">
+                                <img class="clients-footer-pic"  runat="server" src="Content/img/clients.jpg"  width="150" height="90"/>
+                            </a>   
+                        </div>
+                         <div class="col-md-2">
+                            <a runat="server" href="~/Designs">
+                                <img class="clients-footer-pic"  runat="server" src="Content/img/clients.jpg"  width="150" height="90"/>
+                            </a>   
+                        </div>
+                         <div class="col-md-2">
+                            <a runat="server" href="~/Designs">
+                                <img class="clients-footer-pic"  runat="server" src="Content/img/clients.jpg"  width="150" height="90"/>
+                            </a>   
+                        </div>           
+                     </div>
+                <h3>Contacts:</h3>
+                <div id="footer-contacts">
+                     <address id="footer-address">   
+                          One Microsoft Way<br /> 
+                          Redmond, WA 98052-6399<br />
+                        <abbr title="Phone"> P:</abbr>
+                        425.555.0100
+                          <br />
+                         <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
+                         <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
+                    </address>
+               </div>
+            </footer>
+        </div>
+    </form>
+</body>
+</html>

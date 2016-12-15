@@ -1,0 +1,4 @@
+C:\Users\kalin.petrov\documents\visual studio 2015\Projects\MyBlogDemoModel\ShopWeb.Data\bin\Debug\ShopWeb.Data.dll
+C:\Users\kalin.petrov\documents\visual studio 2015\Projects\MyBlogDemoModel\ShopWeb.Data\bin\Debug\ShopWeb.Data.pdb
+C:\Users\kalin.petrov\documents\visual studio 2015\Projects\MyBlogDemoModel\ShopWeb.Data\obj\Debug\ShopWeb.Data.dll
+C:\Users\kalin.petrov\documents\visual studio 2015\Projects\MyBlogDemoModel\ShopWeb.Data\obj\Debug\ShopWeb.Data.pdb

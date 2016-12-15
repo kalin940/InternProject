@@ -1,0 +1,65 @@
+﻿@model IEnumerable<MVCBlog.Data.Post>
+@using MVCBlog.Classes
+
+@{
+    ViewBag.Title = "Posts";
+}
+
+<h2>Posts</h2>
+@if (Request.IsAuthenticated)
+{
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+}
+<table class="table">
+    <tr>
+        <th>           
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Body)
+        </th>
+        <th>
+             Author:
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.ActionLink(item.Title, "Details", new { id = item.Id })        
+        </td>
+        <td>
+            @Utils.CutText(item.Body)
+        </td>
+        <td>
+            @if (item.Author != null)
+            {
+                @Html.DisplayFor(modelItem => item.Author.FullName)
+            }
+            else
+            {
+               <span><i>No Author</i></span>
+            }
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>      
+            @if (Roles.IsUserInRole(User.Identity.Name, "Administrators"))
+            {
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                    
+                </td>
+            }
+    </tr>
+}
+
+</table>

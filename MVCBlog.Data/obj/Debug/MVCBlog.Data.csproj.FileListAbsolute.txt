@@ -1,0 +1,14 @@
+C:\Users\kalin.petrov\documents\visual studio 2015\Projects\MyBlogDemoModel\MVCBlog.Data\bin\Debug\MVCBlog.Data.dll.config
+C:\Users\kalin.petrov\documents\visual studio 2015\Projects\MyBlogDemoModel\MVCBlog.Data\bin\Debug\MVCBlog.Data.dll
+C:\Users\kalin.petrov\documents\visual studio 2015\Projects\MyBlogDemoModel\MVCBlog.Data\bin\Debug\MVCBlog.Data.pdb
+C:\Users\kalin.petrov\documents\visual studio 2015\Projects\MyBlogDemoModel\MVCBlog.Data\bin\Debug\EntityFramework.dll
+C:\Users\kalin.petrov\documents\visual studio 2015\Projects\MyBlogDemoModel\MVCBlog.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\kalin.petrov\documents\visual studio 2015\Projects\MyBlogDemoModel\MVCBlog.Data\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\kalin.petrov\documents\visual studio 2015\Projects\MyBlogDemoModel\MVCBlog.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\kalin.petrov\documents\visual studio 2015\Projects\MyBlogDemoModel\MVCBlog.Data\bin\Debug\EntityFramework.xml
+C:\Users\kalin.petrov\documents\visual studio 2015\Projects\MyBlogDemoModel\MVCBlog.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\kalin.petrov\documents\visual studio 2015\Projects\MyBlogDemoModel\MVCBlog.Data\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\kalin.petrov\documents\visual studio 2015\Projects\MyBlogDemoModel\MVCBlog.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\kalin.petrov\documents\visual studio 2015\Projects\MyBlogDemoModel\MVCBlog.Data\obj\Debug\MVCBlog.Data.dll
+C:\Users\kalin.petrov\documents\visual studio 2015\Projects\MyBlogDemoModel\MVCBlog.Data\obj\Debug\MVCBlog.Data.pdb
+C:\Users\kalin.petrov\documents\visual studio 2015\Projects\MyBlogDemoModel\MVCBlog.Data\obj\Debug\MVCBlog.Data.csprojResolveAssemblyReference.cache
